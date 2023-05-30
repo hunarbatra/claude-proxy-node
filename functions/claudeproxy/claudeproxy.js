@@ -3,7 +3,7 @@ const axios = require('axios');
 exports.handler = async function(event, context) {
   // Standard CORS headers
   const headers = {
-    'Access-Control-Allow-Origin': event.headers.origin || '*',
+    'Access-Control-Allow-Origin': event.headers['origin'] || '*',
     'Access-Control-Allow-Headers': 'Content-Type,x-api-key',
     'Access-Control-Allow-Methods': 'POST,OPTIONS',
   };
